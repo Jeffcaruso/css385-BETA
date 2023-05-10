@@ -113,7 +113,7 @@ public class HeroBehavior : MonoBehaviour
                 break;
             }
             //normal jump
-            else if (Input.GetKeyDown(KeyCode.W))
+            else if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space)) //for now, w or space for norm. jump
             {
                 //Debug.Log("Testing, W has been pressed, normal jump!");
 
@@ -213,7 +213,7 @@ public class HeroBehavior : MonoBehaviour
                 //if already falling, fall at normal rate...
                 rb.gravityScale = gravity * fallMultiplier;
             } 
-            else if (rb.velocity.y > 0 && !(Input.GetKey(KeyCode.W)  || Input.GetKey(KeyCode.LeftShift)))  //Note  the W || <shift> making the 'reduced gravity'
+            else if (rb.velocity.y > 0 && !(Input.GetKey(KeyCode.W)  || Input.GetKey(KeyCode.LeftShift)  || Input.GetKey(KeyCode.Space)))  //Note  the W or <shift> or <space> making the 'reduced gravity'
             {
                 rb.gravityScale = gravity * (fallMultiplier / 2);
             }
