@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Floor
+  - Grapple
+  - Piston
+  - Void
   layers:
   - Default
   - TransparentFX

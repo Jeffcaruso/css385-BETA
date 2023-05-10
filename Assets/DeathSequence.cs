@@ -7,16 +7,18 @@ public class DeathSequence : MonoBehaviour
 
     BoxCollider2D bc;
     Rigidbody2D rb;
+    GameObject piston;
     // Start is called before the first frame update
     void Start()
     {
         bc = GetComponent<BoxCollider2D>();
         rb = GetComponent<Rigidbody2D>();
+        piston = GameObject.Find("Piston");
     }
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if(col.CompareTag("Piston"))
+        if(col.CompareTag("Piston") || transform.position.x < piston.transform.position.x)
         {
             Debug.Log("TESTING Collided with piston, die now");
             DeathAnimation();
