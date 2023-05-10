@@ -1,8 +1,8 @@
-# Alpha build of final project game
+# Beta build of final project game
 
-# [WebGL Build](https://jeffcaruso.github.io/css385-ALPHA/)
+# [WebGL Build](https://jeffcaruso.github.io/css385-BETA/)
 
-# [Partial WebGL Build w/Art](https://jeffcaruso.github.io/css385-ALPHA/ArtBuild/)
+# [Partial WebGL Build w/Art](https://jeffcaruso.github.io/css385-BETA/ArtBuild/)
 
 ### Level 1 (Tutorial)
 - Introduce Piston
