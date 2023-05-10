@@ -2,7 +2,7 @@
 
 ## Update. Builds are not working over here yet. Need to re-build...
 
-# [WebGL Build](https://jeffcaruso.github.io/css385-BETA/)
+# [WebGL Build](https://jeffcaruso.github.io/css385-BETA/JeffMasterBuild/)
 
 # [Partial WebGL Build w/Art](https://jeffcaruso.github.io/css385-BETA/ArtBuild/)
 
