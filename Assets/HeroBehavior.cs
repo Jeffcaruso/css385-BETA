@@ -68,7 +68,7 @@ public class HeroBehavior : MonoBehaviour
         if(isGrappling)
         {
             //don't do movement
-            Debug.Log("grapple!");
+            //Debug.Log("grapple!");
             return;
         }
 
@@ -213,7 +213,7 @@ public class HeroBehavior : MonoBehaviour
                 //if already falling, fall at normal rate...
                 rb.gravityScale = gravity * fallMultiplier;
             } 
-            else if (rb.velocity.y > 0 && !(Input.GetKey(KeyCode.W)  || Input.GetKey(KeyCode.LeftShift)  || Input.GetKey(KeyCode.Space)))  //Note  the W or <shift> or <space> making the 'reduced gravity'
+            else if (rb.velocity.y > 0 && !(Input.GetKey(KeyCode.W)  || Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.Space)))  //Note  the W or <shift> or <space> making the 'reduced gravity'
             {
                 rb.gravityScale = gravity * (fallMultiplier / 2);
             }
@@ -257,15 +257,16 @@ public class HeroBehavior : MonoBehaviour
         Gizmos.DrawLine(transform.position, transform.position + Vector3.down * groundLength);
     }
 
-    //private void OnTriggerEnter2D(Collider2D col)
-    //{
-    //    if(col.CompareTag("Piston"))
-    //    {
-    //        Debug.Log("TESTING Collided with piston, die now");
-
-    //        Application.Quit();
-    //    }
-    //}
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+       if(col.CompareTag("Void"))
+       {
+           GameObject respawnPoint = col.gameObject.transform.parent.GetChild(0).gameObject;  //RespawnPoint Object must be in slot 0
+           transform.position = new Vector3(respawnPoint.transform.position.x,
+                                            respawnPoint.transform.position.y,
+                                            transform.position.z);
+       }
+    }
 
 }
 
