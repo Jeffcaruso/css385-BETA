@@ -261,7 +261,7 @@ public class HeroBehavior : MonoBehaviour
     {
        if(col.CompareTag("Void"))
        {
-           GameObject respawnPoint = col.gameObject.transform.parent.GetChild(0).gameObject;
+           GameObject respawnPoint = col.gameObject.transform.parent.GetChild(0).gameObject;  //RespawnPoint Object must be in slot 0
            transform.position = new Vector3(respawnPoint.transform.position.x,
                                             respawnPoint.transform.position.y,
                                             transform.position.z);
