@@ -1,6 +1,6 @@
 # Beta build of final project game
 
-## Update. Builds are not working over here yet. Need to re-build...
+# [Website](https://jeffcaruso.github.io/css385-BETA/)
 
 # [WebGL Build](https://jeffcaruso.github.io/css385-BETA/JeffMasterBuild/)
 
@@ -19,9 +19,16 @@
 - Easy path
 - relatively Hard, but doable path
 
-### More levels to come
+### Level 3 (Lawrence level)
+- more info here...
 
-### more details later...
+### Level 4 (Malaki Level)
+- more info here...
+
+
+### Level 5 (Joseph Level)
+- more info here...
+
 
 ## Produced By:
 ### Team 10 (Jeffrey, Malachai, Lawrence, Joeseph)
