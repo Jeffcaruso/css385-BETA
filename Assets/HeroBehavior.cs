@@ -6,20 +6,20 @@ public class HeroBehavior : MonoBehaviour
 {
     //Most of these Vars are made private b/c it will only add confusion modifying them in unity editor...
     [Header("Horizontal Movement")]
-    private float moveSpeed = 100f;
-    private float maxSpeed = 70f;
+    private float moveSpeed = 300f;     //100
+    private float maxSpeed = 200f;      //70
 
     [Header("Vertical Movement")]
     //ensure the next two items are the same, or you will only use defaultJumpForce value!!!
-    private float jumpForce = 100f;
-    private float defaultJumpForce = 100f;
+    private float jumpForce = 150f;             //100
+    private float defaultJumpForce = 150f;      //100
 
-    private float SpringShoeMultiplier = 2.5f;
+    private float SpringShoeMultiplier = 2.0f;
     //public bool springShoesON = false; //MAY END UP BEING USEFUL FOR FUTURE INTEGRATIONS (could be a killswitch for letting shift do a jump...
     //or could adjust spring shoe multiplier to 1... (could have upgraded spring shoes on occasions if needed...
 
     private float jumpDelay = 0.25f;
-    private float runningJumpForce = 25.0f; //this is a bit too strong at 5...
+    private float runningJumpForce = 50.0f; 
 
 
     [Header("Items To Handle in Unity Editor")]
@@ -31,9 +31,9 @@ public class HeroBehavior : MonoBehaviour
 
     //more partially movement related items
     [Header("Misc Movement")]
-    private float linearDrag = 4f;
-    private float gravity = 10f;
-    private float fallMultiplier = 3f;  //was 5...
+    private float linearDrag = 2f;      //4
+    private float gravity = 30f;        //10
+    private float fallMultiplier = 3f;  //3     //was 5...
     
 
     [Header("Misc Private Vars")]
