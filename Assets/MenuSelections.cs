@@ -35,6 +35,7 @@ public class MenuSelections : MonoBehaviour
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;
+        GameObject.Find("Piston").GetComponent<PistonMovement>().enabled = true;
     }
 
     private void Pause()
@@ -42,9 +43,13 @@ public class MenuSelections : MonoBehaviour
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         isPaused = true;
+        GameObject.Find("Piston").GetComponent<PistonMovement>().enabled = false;
     }
 
     public void LevelSelect(){
+        Time.timeScale = 1f;
+        isPaused = false;
+        dead = false;
         SceneManager.LoadScene("Level Select Scene");
     }
 
