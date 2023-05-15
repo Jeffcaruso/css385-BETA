@@ -16,6 +16,7 @@ public class josephPlayeBehavior : MonoBehaviour
     private float jumpForce;
     private bool isJumping;
     private bool isGrounded;
+    public bool isGrappling;
     private float jumpKeyHoldTime;
     private Vector2 storedVelocity;
 
@@ -29,14 +30,10 @@ public class josephPlayeBehavior : MonoBehaviour
         currentSpeed = startSpeed;
         jumpKeyHoldTime = 0;
         currentSpeed = startSpeed;
-        
+        storedVelocity = rb.velocity;
     }
     private void OnDisable() {
         storedVelocity = new Vector2(rb.velocity.x, 0);
-    }
-
-    private void OnEnable() {
-        rb.velocity = rb.velocity + storedVelocity;
     }
 
     void Update()
@@ -74,6 +71,8 @@ public class josephPlayeBehavior : MonoBehaviour
 
         // Increase speed over time until it reaches maxSpeed
         currentSpeed = Mathf.MoveTowards(currentSpeed, maxSpeed, speedToGainPerSecond * Time.deltaTime);
+
+        storedVelocity = rb.velocity;
     }
 
     void FixedUpdate()

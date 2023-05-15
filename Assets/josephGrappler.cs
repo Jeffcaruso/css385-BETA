@@ -20,7 +20,7 @@ public class josephGrappler : MonoBehaviour
     void Start()
     {
         _distanceJoint.enabled = false;
-        localGrapple = GetComponent<HeroBehavior>().isGrappling;
+        localGrapple = GetComponent<josephPlayeBehavior>().isGrappling;
         rb = thePlayer.GetComponent<Rigidbody2D>();
         player = GameObject.Find("Hero square");
     }
@@ -76,13 +76,13 @@ public class josephGrappler : MonoBehaviour
                 _distanceJoint.connectedAnchor = grappleBlock.transform.position;
                 _distanceJoint.enabled = true;
                 _lineRenderer.enabled = true;
-                player.GetComponent<HeroBehavior>().enabled = false;
+                player.GetComponent<josephPlayeBehavior>().enabled = false;
                 rb.AddForce(new Vector2(1f,1f) * 8, ForceMode2D.Impulse);
             } else {
                 _distanceJoint.enabled = false;
                 _lineRenderer.enabled = false;
                 localGrapple = false;
-                player.GetComponent<HeroBehavior>().enabled = true;
+                player.GetComponent<josephPlayeBehavior>().enabled = true;
             }
 
             if (_distanceJoint.enabled)

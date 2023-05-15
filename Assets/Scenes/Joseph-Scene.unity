@@ -1784,6 +1784,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4751790832678319567, guid: b2db7cbf3f80d9548b7c5c2a0ebdca1a, type: 3}
+      propertyPath: joePlayer
+      value: 
+      objectReference: {fileID: 1643988679}
+    - target: {fileID: 4751790832678319567, guid: b2db7cbf3f80d9548b7c5c2a0ebdca1a, type: 3}
       propertyPath: thePlayer
       value: 
       objectReference: {fileID: 0}
@@ -2771,6 +2775,10 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4751790832678319567, guid: b2db7cbf3f80d9548b7c5c2a0ebdca1a, type: 3}
+      propertyPath: joePlayer
+      value: 
+      objectReference: {fileID: 1643988679}
     - target: {fileID: 4751790832678319567, guid: b2db7cbf3f80d9548b7c5c2a0ebdca1a, type: 3}
       propertyPath: thePlayer
       value: 
@@ -3984,6 +3992,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4751790832678319567, guid: b2db7cbf3f80d9548b7c5c2a0ebdca1a, type: 3}
+      propertyPath: joePlayer
+      value: 
+      objectReference: {fileID: 1643988679}
+    - target: {fileID: 4751790832678319567, guid: b2db7cbf3f80d9548b7c5c2a0ebdca1a, type: 3}
       propertyPath: thePlayer
       value: 
       objectReference: {fileID: 0}
@@ -4787,5 +4799,7 @@ PrefabInstance:
       propertyPath: timeToMaxJumpForce
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4678504400156727077, guid: 01a174857672a2e43b5d2aee40e811e5, type: 3}
+    - {fileID: 4678504400156727078, guid: 01a174857672a2e43b5d2aee40e811e5, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 01a174857672a2e43b5d2aee40e811e5, type: 3}
