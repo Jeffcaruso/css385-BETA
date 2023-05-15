@@ -26,6 +26,11 @@ public class DeathSequence : MonoBehaviour
     }
 
     private void DeathAnimation(){
+        /*Turns off Grappling Code for animation to work while grappling*/
+        GetComponent<Grappler>()._distanceJoint.enabled = false;
+        GetComponent<Grappler>()._lineRenderer.enabled = false;
+        GetComponent<Grappler>().localGrapple = false;
+        /*--------------------------------------------------------------*/
         GetComponent<HeroBehavior>().enabled = false;
         GameObject.Find("Main Camera").GetComponent<CameraFollow>().following = false;
         bc.enabled = false;

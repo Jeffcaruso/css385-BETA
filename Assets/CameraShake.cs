@@ -36,6 +36,7 @@ public class CameraShake : MonoBehaviour
         }
 
         transform.position = originalPos;
+        MenuSelections.dead = true;
         //GameObject.Find("MainCharacter").GetComponent<MC>().DeathMessage();
     }
 }
