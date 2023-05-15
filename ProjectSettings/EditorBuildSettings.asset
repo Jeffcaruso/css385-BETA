@@ -17,9 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Lawrence-Scene.unity
     guid: 46295f1339ab33e4a90404aef2bcb533
-  - enabled: 1
-    path: Assets/Scenes/Joseph-Scene.unity
-    guid: 06912d81d85b11e4f814ee56a3a4c473
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Malachi-Scene.unity
     guid: babad9d6d99fb8d41a0be9deae0f55d0

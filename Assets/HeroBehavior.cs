@@ -49,47 +49,31 @@ public class HeroBehavior : MonoBehaviour
     public GameObject player;
     Rigidbody playerRigidbody;
 
-
-
-    // Start is called before frame 0
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         playerRigidbody = player.GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        ///Grapple stuff...
+        // Handle Grapple
         Vector3 pos = transform.position;
         isGrappling = GetComponent<Grappler>().localGrapple;
-
         if(isGrappling)
         {
             //don't do movement
-            //Debug.Log("grapple!");
             return;
         }
 
-        
-
-
-
-
-        // end grapple stuff...
-
-
-
-        //ground detection via Raycasts
-        //Debug.Log("On ground is : " + onGround + "\n");
+        // Raycasts For Ground Detection
         onGround = Physics2D.Raycast(transform.position + colliderOffset, Vector2.down, groundLength, groundLayer) || 
             Physics2D.Raycast(transform.position - colliderOffset, Vector2.down, groundLength, groundLayer) ||
             Physics2D.Raycast(transform.position + (colliderOffset /2), Vector2.down, groundLength, groundLayer) ||
             Physics2D.Raycast(transform.position - (colliderOffset /2), Vector2.down, groundLength, groundLayer) ||
             Physics2D.Raycast(transform.position, Vector2.down, groundLength, groundLayer);  //center
 
-        //reset jump force to default
+        // reset jump force to default
         if (jumpTimer == 0)
         {
             //generally won't need, but reduces shenanigans
@@ -127,14 +111,9 @@ public class HeroBehavior : MonoBehaviour
 
         ///very important line directly below!!!
         direction = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));   
-        
-
-
-
-
+    
 
     }
-
 
     private void FixedUpdate()
     {
@@ -235,7 +214,6 @@ public class HeroBehavior : MonoBehaviour
         jumpTimer = 0;
     }
 
-
     //optional visualization of ground contact detection
     //however, doesn't appear when actually running (only in editor preview, and is very helpful, so leave it on)
         // You can see if you have misconfigured your ground detection boundaries with these!
@@ -270,10 +248,6 @@ public class HeroBehavior : MonoBehaviour
 
 }
 
-
-
-
-
 /*
 Links to see to further facilitate this code
 See ReadMe at: https://github.com/Jeffcaruso/css385-finalProject-jump-demo
@@ -281,11 +255,6 @@ Links:
 Raycast: https://docs.unity3d.com/ScriptReference/Physics2D.Raycast.html 
 Link info: https://github.com/t4guw/100-Unity-Mechanics-for-Programmers/tree/master/programs/super_mario_style_jump 
 */
-
-
-
-
-
 
 /*
  * Currently Unused code... (Temporary storage, delete later)
@@ -323,17 +292,4 @@ Link info: https://github.com/t4guw/100-Unity-Mechanics-for-Programmers/tree/mas
         //     Debug.Log("TEST! with Space - Spring shoes!");
         //     rb.AddForce(new Vector3(0f, 21f, 0f), ForceMode2D.Impulse);
         // } 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
  */ 
