@@ -27,9 +27,9 @@ public class light2 : MonoBehaviour
         circle.transform.SetParent(this.transform);
         
         Color tmp = GetComponent<SpriteRenderer>().color;
-        tmp.r = 250;
-        tmp.b = 0;
-        tmp.g = 0;
+        tmp.r = 30;
+        tmp.b = 30;
+        tmp.g = 30;
         tmp.a = 0.4f;
         circle.GetComponent<SpriteRenderer>().color = tmp;
 

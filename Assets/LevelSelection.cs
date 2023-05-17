@@ -38,8 +38,8 @@ public class LevelSelection : MonoBehaviour
         }
         else if (Input.GetKeyDown("5"))
         {
-            //level 5 (Joseph)
-            SceneManager.LoadScene("Joseph-Scene");
+            //level 5 (empty level)
+            SceneManager.LoadScene("1");
         }
         else
         {
