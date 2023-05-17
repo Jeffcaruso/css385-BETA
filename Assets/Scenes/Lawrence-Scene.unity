@@ -2757,6 +2757,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1172011576}
+  offsetx: 0
+  offsety: 20
   following: 1
   followSpeed: 999
 --- !u!114 &1194823217
@@ -2790,7 +2792,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6503245619651101274, guid: 1be5081015da967429b91dfaf0f53165, type: 3}
       propertyPath: pistonSpeed
-      value: 180
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 6503245619651101276, guid: 1be5081015da967429b91dfaf0f53165, type: 3}
       propertyPath: m_RootOrder
