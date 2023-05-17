@@ -6,6 +6,21 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Level Select Scene.unity
+    guid: 3d5cdfc5d4da6144f88119b1874c2a08
+  - enabled: 1
+    path: Assets/Scenes/Tutorial-Scene.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Jeffrey-Scene.unity
+    guid: d0712f104f23e484387392be32758cde
+  - enabled: 1
+    path: Assets/Scenes/Lawrence-Scene.unity
+    guid: 46295f1339ab33e4a90404aef2bcb533
+  - enabled: 1
+    path: Assets/Scenes/Malachi-Scene.unity
+    guid: babad9d6d99fb8d41a0be9deae0f55d0
+  - enabled: 1
     path: Assets/Scenes/Joseph-Scene.unity
     guid: a1752edec892ddc4a993c6887da3c54d
   m_configObjects: {}
